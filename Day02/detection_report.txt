@@ -1,0 +1,8 @@
+REPORTER: Doyeon Kim 
+CONTENTS: New file has detected.
+fileTest_01.txt 
+==================================================
+REPORTER: Doyeon Kim 
+CONTENTS: New file has detected.
+fileTest_02.txt 
+==================================================
