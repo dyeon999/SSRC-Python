@@ -1,0 +1,2 @@
+Hello, it's Python Time!
+If you use 'with', the file will be closed automatically.
