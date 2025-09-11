@@ -2,12 +2,14 @@ import os
 current_directory = os.getcwd()
 print("Current working directory: ", current_directory)
 
+# file check
 file_path = "Day02\\file.txt"
 
 if os.path.isfile(file_path):
     print(f"{file_path} is a file")
 else: print(f"{file_path} is not a file")
 
+# directory check
 dir_path = "Day01"
 
 if os.path.isdir(dir_path):
