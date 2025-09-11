@@ -1,0 +1,16 @@
+import os
+
+files = os.listdir('.')
+print(files)
+
+for file in files:
+    print(file)
+
+files = os.walk('.')
+print(files)
+
+for dirpath, dirnames, filenames in files:
+    print(f"Found directory: {dirpath}")
+    print(f"Subdir: {dirnames}")
+    print(f"File: {filenames}")
+    print("-"*50)
