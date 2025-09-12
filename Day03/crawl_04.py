@@ -15,6 +15,6 @@ for tag in tags:
     link_href = f"https://www.malware-traffic-analysis.net/2023/{tag.get('href')}"
     results.append(f"{link_txt} \n{link_href} \n")
 
-with open('Day03/malwares.txt', 'w', encoding='utf-8') as file:
+with open('Day03/crawl_malwares.txt', 'w', encoding='utf-8') as file:
     for result in results:
         file.write(result)

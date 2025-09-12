@@ -24,4 +24,9 @@ for entry in feed.entries:
     authors.append(entry.author)
     publishes.append(entry.published)
 
-print(titles)
+data = {"제목": titles, "링크": links, "요약": descriptions, "작성자": authors, "날짜": publishes}
+
+df = pd.DataFrame(data)
+
+df.to_excel('Day03/DailySecu.xlsx', index=False)
+print("COMPLETELY CREATED THE FILE")
