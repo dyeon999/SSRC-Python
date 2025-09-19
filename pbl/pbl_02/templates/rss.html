@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 스타일시트(style.css)를 불러옵니다. -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h2>뉴스 음성 듣기</h2>
+    <audio controls>
+        <source src="/{{ mp3_file }}" type="audio/mpeg">
+        브라우저가 audio 태그를 지원하지 않습니다.
+    </audio>
+    <br>
+    <a href="{{ url_for('download', filename=mp3_file) }}">MP3 다운로드</a>
+    <br><br>
+    
+    <h2>rss 결과 페이지</h2>
+    <!-- RSS 피드의 데이터(제목, 링크, 요약)를 표 형태로 출력합니다. -->
+    <table border="1">
+        <tr>
+            <td>제목</td>
+            <td>링크</td>
+            <td>요약</td>
+        </tr>
+        {% for entry in feed.entries %}   <!-- 각 피드 항목을 반복하며 테이블에 표시합니다. -->
+        <tr>
+            <td>{{ entry.title }}</td>
+            <td><a href="{{ entry.link }}">{{ entry.link }}</a></td>
+            <td>{{ entry.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

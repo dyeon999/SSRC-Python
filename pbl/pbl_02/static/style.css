@@ -1,0 +1,39 @@
+/* style.css */
+
+/* 페이지에 사용할 글꼴을 지정합니다. */
+body {
+font-family: Arial, sans-serif;
+}
+
+/* 제목(h1) 색상을 지정합니다. */
+h1 {
+color: #333;
+}
+
+/* 표의 선과 크기 설정, 전체 너비를 사용 */
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+/* 표의 셀 안쪽 여백과 정렬 방식 설정 */
+th, td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: left;
+}
+
+/* 표의 제목 부분 배경색 설정 */
+th {
+background-color: #f2f2f2;
+}
+
+/* 짝수 행의 배경색 구분 */
+tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+
+/* 마우스를 올리면 행의 배경색 변경 */
+tr:hover {
+background-color: #f5f5f5;
+}
